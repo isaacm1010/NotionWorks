@@ -107,7 +107,10 @@ body{
         var hours = currentTime.getHours();
         var minutes = currentTime.getMinutes();
 	var seconds = currentTime.getSeconds();
-        if (minutes < 10){
+        if (hours < 10){
+            hours = "0" + hours;
+        }
+	if (minutes < 10){
             minutes = "0" + minutes;
         }
         document.getElementById('hours').innerHTML = hours;
