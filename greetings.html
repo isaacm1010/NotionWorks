@@ -14,7 +14,7 @@
 
 
 }
-#date{
+#date,#day{
     font-size:large;
 }
 body{
@@ -93,7 +93,8 @@ body{
     var today = new Date();
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
-    var date = dayOfWeek + ",\n" + months[today.getMonth()] + " " + today.getDate() + ", " + " " + today.getFullYear()  ;
+    var day = dayOfWeek;
+    var date = months[today.getMonth()] + " " + today.getDate() + ", " + " " + today.getFullYear();
 
     var greet;
     if (hrs < 12)
@@ -104,7 +105,7 @@ body{
         greet = 'Good Evening Isaac,';
 
     document.getElementById('lbl').innerHTML =
-        greet+= `<div id="date"> It's ${date}</div>`;
+        greet+= `<div id="day"> It's ${day}</div>` + `<div id="date"> It's ${date}</div>`;
     
     // Update Clock widget
     function updateTime(){
