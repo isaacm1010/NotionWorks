@@ -20,11 +20,16 @@
 body{
     background-color: aliceblue;
 }
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
     </style>
 </head>
 <body>
-    <div id="lbl" style="max-height: 40%;"></div>
-    <div class="DPDC" cityid="5688" lang="en" id="dayspedia_widget_b555d1fd50ed067" host="https://dayspedia.com" ampm="true" nightsign="true" sun="false">
+    <div id="lbl" style="max-height: 80px;"></div>
+    <div class="DPDC center" cityid="5688" lang="en" id="dayspedia_widget_b555d1fd50ed067" host="https://dayspedia.com" ampm="true" nightsign="true" sun="false" >
 
 	<style media="screen" id="dayspedia_widget_b555d1fd50ed067_style">
 				/*COMMON*/
@@ -88,7 +93,7 @@ body{
     var today = new Date();
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
-    var date = dayOfWeek + " " + months[today.getMonth()] + " " + today.getDate() + ", " + " " + today.getFullYear()  ;
+    var date = dayOfWeek + ",\n" + months[today.getMonth()] + " " + today.getDate() + ", " + " " + today.getFullYear()  ;
 
     var greet;
     if (hrs < 12)
