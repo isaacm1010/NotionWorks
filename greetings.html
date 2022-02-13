@@ -6,8 +6,7 @@
     font-family: monospace;
     font-size: xx-large;
     color: #626262;
-    padding: 5px;
-    border: 1px solid #ececec;
+    padding: 25px;
     text-align: center;
     line-height: 1.5;
     height:85%
@@ -105,7 +104,7 @@ body{
         greet = 'Good Evening Isaac,';
 
     document.getElementById('lbl').innerHTML =
-        greet+= `<div id="day"> It's ${day}</div>` + `<div id="date"> It's ${date}</div>`;
+        greet+= `<div id="day"> It's ${day}</div>` + `<div id="date">${date}</div>`;
     
     // Update Clock widget
     function updateTime(){
