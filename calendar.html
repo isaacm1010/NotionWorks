@@ -6,13 +6,15 @@
 </body>
 <script>
   $(document).ready(function () {
-    while (!document.getElementById("container")) {
+    var poison_pill = true;
+    while (poison_pill) {
       setTimeout(function() {
-        if (document.getElementById("container")) {
+        if (document.getElementById("container").style.width === "100%") {
           console.log(document.getElementById("container"));
           document.getElementById("container").style.width = "88.8889%";
           document.getElementById("container").style.height = "0.8889%";
           document.getElementById("container").style.margin = "37.5px 0 0 50px";
+          poison_pill = false;
       }, 10);
     }
   }
