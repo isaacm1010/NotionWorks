@@ -19,37 +19,10 @@
 body{
     background-color: aliceblue;
 }
-.center {
-  margin: auto;
-  padding: 10px;
-}
     </style>
 </head>
 <body>
     <div id="lbl" style="max-height: 80px;"></div>
-    <div class="DPDC center" cityid="5688" lang="en" id="dayspedia_widget_b555d1fd50ed067">
-	    <style>
-		.DPDC{display:table;position:relative;box-sizing:border-box;font-size:100.01%;font-style:normal;font-family:Arial;background-position:50% 50%;background-repeat:no-repeat;background-size:cover;overflow:hidden;user-select:none}
-		.DPDCh,.DPDCd{width:fit-content;line-height:1.4}
-		.DPDCh{margin-bottom:1em}
-		.DPDCt{line-height:1}
-		.DPDCth,.DPDCtm,.DPDCts{display:inline-block;vertical-align:text-top;white-space:nowrap}
-		.DPDCth{min-width:1.15em}
-		.DPDCtm,.DPDCts{min-width:1.44em}
-		.DPDCtm::before,.DPDCts::before{display:inline-block;content:':';vertical-align:middle;margin:-.34em 0 0 -.07em;width:.32em;text-align:center;opacity:.72;filter:alpha(opacity=72)}
-		.DPDCt12{display:inline-block;vertical-align:text-top;font-size:40%}
-		.DPDCs{margin:.96em 0 0 -3px;font-size:90%;line-height:1;white-space:nowrap}
-		.DPDCs sup{padding-left:.24em;font-size:65%}
-		.DPDCs svg{display:inline-block;vertical-align:bottom;width:1.2em;height:1.2em;opacity:.48}
-		.DPDCh{color:#007DBF;font-weight:normal} /* headline color, font-weight*/
-		.DPDCt,.DPDCd{color:#343434;font-weight:bold} /* time & date color, font-weight */
-		.DPDCt{font-size:48px;width: 224px;} /* time font-size */
-		.DPDCh,.DPDCd{font-size:16px} /* headline & date font-size */
-	</style>
-	<div class="DPDCt center">
-		<span id="hours" class="DPDCth"></span><span id="minutes" class="DPDCtm">02</span><span id="seconds" class="DPDCts"></span><span id="time-mark" class="DPDCt12"></span>
-	</div>
-    </div>
 </body>
 
 <script>
@@ -73,27 +46,5 @@ body{
 
     document.getElementById('lbl').innerHTML =
         greet+= `<div id="day"> It's ${day}</div>` + `<div id="date">${date}</div>`;
-    
-    // Update Clock widget
-    function updateTime(){
-        var currentTime = new Date();
-        var hours = currentTime.getHours();
-        var minutes = currentTime.getMinutes();
-	var seconds = currentTime.getSeconds();
-        if (hours < 10){
-            hours = "0" + hours;
-        }
-	if (minutes < 10){
-            minutes = "0" + minutes;
-        }
-	if (seconds < 10){
-            seconds = "0" + seconds;
-        }
-        document.getElementById('hours').innerHTML = hours;
-        document.getElementById('minutes').innerHTML = minutes;
-        document.getElementById('seconds').innerHTML = seconds;
-        document.getElementById('time-mark').innerHTML = (hours > 11) ? "PM" : "AM";
-    }
-    setInterval(updateTime, 1000);
 </script> 
 </html>
