@@ -41,8 +41,8 @@
 		.DPDCh,.DPDCd{font-size:16px} /* headline & date font-size */
 	</style>
     <div class="row">
-        <div class="col col-auto">
-	    <div class="maintxt">
+        <div class="col background">
+	    <div class="maintxt center">
 	      <span id="hours" class="DPDCth"></span><span id="minutes" class="DPDCtm">02</span><span id="seconds" class="DPDCts"></span><span id="time-mark" class="DPDCt12"></span>
 	    </div>
         </div>
@@ -77,10 +77,15 @@
   .center {
     margin: auto;
   }  
-.maintxt {
+.background {
     background-image: url(clock.png);
     background-size: cover;
-    padding-top: 58.36734694%;
+    width: 100%
+}
+.background:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
   </style>
 </html>
