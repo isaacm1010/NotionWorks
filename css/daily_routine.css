@@ -1,10 +1,3 @@
-// vars
-:root {
-    --default-blue: #626E7E;
-    --light-blue: #c8cdd4;
-    --lightest-blue: #d1d5db;
-}
-
 table{
   font-family:sans-serif;
   width: 100%;
@@ -16,8 +9,8 @@ table{
   thead{
       tr{
           th{
-              background: var(--default-blue);
-              color: var(--lightest-blue);
+              background: #626E7E;
+              color: #d1d5db;
               padding: 0.5em;
               overflow: hidden;
 
@@ -39,8 +32,8 @@ table{
                   line-height: 1.8;
 
                     &.active{
-                        background: var(--lightest-blue);
-                        color: var(--default-blue);
+                        background: #d1d5db;
+                        color: #626E7E;
                     }
               }
 
@@ -57,33 +50,33 @@ table{
   }
   tbody{
       tr{
-          background: var(--lightest-blue);
+          background: #d1d5db;
 
             &:nth-child(odd){
-                background:var(--light-blue);
+                background:#c8cdd4;
             }
             &:nth-child(4n+0){
                 td{
-                    border-bottom:1px solid var(--default-blue);
+                    border-bottom:1px solid #626E7E;
                 }
             }
           td{
               text-align: center;
               vertical-align: middle;
-              border-left: 1px solid var(--default-blue);
+              border-left: 1px solid #626E7E;
               position: relative;
               height: 35px;
               cursor: pointer;
 
               &:last-child{
-                  border-right:1px solid var(--default-blue);
+                  border-right:1px solid #626E7E;
               }
     &.hour{
                   font-size: 2em;
                   padding: 0;
-                  color: var(--default-blue);
+                  color: #626E7E;
                   background:#fff;
-                  border-bottom:1px solid var(--default-blue);
+                  border-bottom:1px solid #626E7E;
                   border-collapse: separate;
                   min-width: 100px;
                   cursor: default;
@@ -144,8 +137,8 @@ table{
                       padding: 5px;
 
                       &.active{
-                          background: var(--lightest-blue);
-                          color: var(--default-blue);
+                          background: #d1d5db;
+                          color: #626E7E;
                       }
                   }
               }
