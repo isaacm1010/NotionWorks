@@ -79,7 +79,7 @@
 	  var dayOfWeek = weekday[today.getDay()];
 	  var day = dayOfWeek;
 	  var date = months[today.getMonth()] + " " + today.getDate() + ", " + " " + today.getFullYear();
-	
+	  
 	  var tableBodyHTML = "";
 	  var displayHour;
 	  for (let hour = 0; hour < SCHEDULE_HOURS; hour++) {
@@ -101,19 +101,19 @@
 	        <td></td>
 	        <td></td>
 	      </tr>`;
-	  }
-	  // Add the remaining subsections
-	  for (let i = 0; i < HOUR_SUBSECTIONS - 1; i++) {
-	    tableBodyHTML += `
-	      <tr>
-	        <td></td>
-	        <td></td>
-	        <td></td>
-	        <td></td>
-	        <td></td>
-	        <td></td>
-	        <td></td>
-	      </tr>`;
+	    // Add the remaining subsections
+	    for (let i = 0; i < HOUR_SUBSECTIONS - 1; i++) {
+	      tableBodyHTML += `
+	        <tr>
+	          <td></td>
+	          <td></td>
+	          <td></td>
+	          <td></td>
+	          <td></td>
+	          <td></td>
+	          <td></td>
+	        </tr>`;
+	    }
 	  }
 	  document.getElementById("id_dailyRoutineTable_body").innerHTML = tableBodyHTML;
   </script>
