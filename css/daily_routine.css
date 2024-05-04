@@ -1,8 +1,8 @@
 // vars
 :root{
     --default-blue: #626E7E;
-    --light-blue: lighten(#626E7E, 38%);
-    --lightest-blue: lighten(#626E7E, 40%);
+    --light-blue: #c8cdd4;
+    --lightest-blue: #d1d5db;
 }
 
 table{
