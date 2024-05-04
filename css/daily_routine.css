@@ -71,7 +71,7 @@ table{
               &:last-child{
                   border-right:1px solid #626E7E;
               }
-    &.hour{
+            &.hour{
                   font-size: 2em;
                   padding: 0;
                   color: #626E7E;
@@ -85,7 +85,9 @@ table{
                       display: block;
 
                   }
-              }  	
+              }
+            &.hour.active {
+              background-color: #66aed6ba;
           }
       }
   }
