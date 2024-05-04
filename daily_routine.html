@@ -116,6 +116,17 @@
 	    }
 	  }
 	  document.getElementById("id_dailyRoutineTable_body").innerHTML = tableBodyHTML;
-	  document.getElementsByClassName("hour active")[0].scrollIntoView();
+	  let activeHourQuery;
+	  let scrollToNow;
+	  scrollToNow = function () {
+	    activeHourQuery = document.getElementsByClassName("hour active");
+	    if (!activeHourQuery.length) {
+	      setTimeout(scrollToNow, 100);
+	      return 0;
+	    }
+	    document.getElementsByClassName("hour active")[0].scrollIntoView();
+	    return 1;
+	  };
+	  
   </script>
 </html>
