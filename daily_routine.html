@@ -242,17 +242,18 @@ table{
         <td></td>
       </tr>`;
   }
-    // Add the remaining subsections
-    for (let i = 0; i < HOUR_SUBSECTIONS - 1; i++) {
-      tableBodyHTML += `
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>`;
+  // Add the remaining subsections
+  for (let i = 0; i < HOUR_SUBSECTIONS - 1; i++) {
+    tableBodyHTML += `
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>`;
   }
+  document.getElementById("id_dailyRoutineTable_body").innerHTML = tableBodyHTML;
 </script>
