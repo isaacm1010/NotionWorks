@@ -10,8 +10,8 @@ table{
   thead{
       tr{
           th{
-              background: #626E7E;
-              color: #d1d5db;
+              background: var(--primary-4);
+              color: var(--primary-10);
               padding: 0.5em;
               overflow: hidden;
 
@@ -33,8 +33,8 @@ table{
                   line-height: 1.8;
 
                     &.active{
-                        background: #d1d5db;
-                        color: #626E7E;
+                        background: var(--primary-10);
+                        color: var(--primary-4);
                     }
               }
 
@@ -52,33 +52,33 @@ table{
   tbody{
     overflow-y: scroll;
       tr{
-          background: #d1d5db;
+          background: var(--primary-10);
 
             &:nth-child(odd){
-                background:#c8cdd4;
+                background: var(--primary-9);
             }
             &:nth-child(4n+0){
                 td{
-                    border-bottom:1px solid #626E7E;
+                    border-bottom: 1px solid var(--primary-4);
                 }
             }
           td{
               text-align: center;
               vertical-align: middle;
-              border-left: 1px solid #626E7E;
+              border-left: 1px solid var(--primary-4);
               position: relative;
               height: 35px;
               cursor: pointer;
 
               &:last-child{
-                  border-right:1px solid #626E7E;
+                  border-right:1px solid var(--primary-4);
               }
             &.hour{
                   font-size: 2em;
                   padding: 0;
-                  color: #626E7E;
-                  background:#fff;
-                  border-bottom:1px solid #626E7E;
+                  color: var(--primary-4);
+                  background: var(--primary-10);
+                  border-bottom:1px solid var(--primary-4);
                   border-collapse: separate;
                   min-width: 100px;
                   cursor: default;
@@ -89,7 +89,8 @@ table{
                   }
               }
             &.hour.active {
-              background-color: #66aed6ba;
+              background-color: var(--primary-6);
+              color: var(--primary-10);
           }
       }
   }
@@ -141,8 +142,8 @@ table{
                       padding: 5px;
 
                       &.active{
-                          background: #d1d5db;
-                          color: #626E7E;
+                          background: var(--primary-10);
+                          color: var(--primary-4);
                       }
                   }
               }
