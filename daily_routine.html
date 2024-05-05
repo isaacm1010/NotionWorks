@@ -14,119 +14,59 @@
     <meta property="og:image" content="notionworks-icon.png">
 
     <link rel="shortcut icon" type="image/png" href="notionworks-icon.png">
-
+    
+    <!-- NotionWorks CSS -->
+    <link rel="stylesheet" href="css/notionworks_shared.css">
+    <!-- Daily Routine CSS -->
     <link rel="stylesheet" href="css/daily_routine.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
   </head>
   <body>
-	<table>
-	  <thead>
-	    <tr>
-	      <th></th>
-	      <th>
-		<span class="day">1</span>
-		<span class="long">Monday</span>
-		<span class="short">Mon</span>
-	      </th>
-	      <th>
-		<span class="day">2</span>
-		<span class="long">Tuesday</span>
-		<span class="short">Tue</span>
-	      </th>
-	      <th>
-		<span class="day">3</span>
-		<span class="long">Wednesday</span>
-		<span class="short">Wed</span>
-	      </th>
-	      <th>
-		<span class="day">4</span>
-		<span class="long">Thursday</span>
-		<span class="short">Thur</span>
-	      </th>
-	      <th>
-		<span class="day active">5</span>
-		<span class="long">Friday</span>
-		<span class="short">Fri</span>
-	      </th>
-	      <th>
-		<span class="day">6</span>
-		<span class="long">Saturday</span>
-		<span class="short">Sat</span>
-	      </th>
-	      <th>
-		<span class="day">7</span>
-		<span class="long">Sunday</span>
-		<span class="short">Sun</span>
-	      </th>
-	    </tr>
-	  </thead>
-	  <tbody id="id_dailyRoutineTable_body">
-	  </tbody>
-	</table>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>
+            <span class="day">1</span>
+            <span class="long">Monday</span>
+            <span class="short">Mon</span>
+          </th>
+          <th>
+            <span class="day">2</span>
+            <span class="long">Tuesday</span>
+            <span class="short">Tue</span>
+          </th>
+          <th>
+            <span class="day">3</span>
+            <span class="long">Wednesday</span>
+            <span class="short">Wed</span>
+          </th>
+          <th>
+            <span class="day">4</span>
+            <span class="long">Thursday</span>
+            <span class="short">Thur</span>
+          </th>
+          <th>
+            <span class="day active">5</span>
+            <span class="long">Friday</span>
+            <span class="short">Fri</span>
+          </th>
+          <th>
+            <span class="day">6</span>
+            <span class="long">Saturday</span>
+            <span class="short">Sat</span>
+          </th>
+          <th>
+            <span class="day">7</span>
+            <span class="long">Sunday</span>
+            <span class="short">Sun</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody id="id_dailyRoutineTable_body"></tbody>
+    </table>
   </body>
-  <script>
-	  const SCHEDULE_HOURS = 24;  // The number of hours to render
-	  const HOUR_SUBSECTIONS = 4; // The number of subsections to render for each hour
-	  
-	  var weekday = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
-	  var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
-	  
-	  var today = new Date();
-	  var hourOfDay = today.getHours();
-	  var dayOfWeek = weekday[today.getDay()];
-	  var day = dayOfWeek;
-	  var date = months[today.getMonth()] + " " + today.getDate() + ", " + " " + today.getFullYear();
-	  
-	  var tableBodyHTML = "";
-	  var displayHour;
-	  for (let hour = 0; hour < SCHEDULE_HOURS; hour++) {
-	    displayHour = hour % 12;
-	    if (displayHour === 0) {
-	      displayHour = 12;
-	    }
-	    // Add the cell spanning multiple subsections & first subsection
-	    tableBodyHTML += `
-	      <tr>
-	        <td class="hour${(hour === hourOfDay) ? " active" : ""}" rowspan="${HOUR_SUBSECTIONS}">
-	          <span>${displayHour}:00 ${(hour < 11) ? "AM": "PM"}</span>
-	        </td>
-	        <td></td>
-	        <td></td>
-	        <td></td>
-	        <td></td>
-	        <td></td>
-	        <td></td>
-	        <td></td>
-	      </tr>`;
-	    // Add the remaining subsections
-	    for (let i = 0; i < HOUR_SUBSECTIONS - 1; i++) {
-	      tableBodyHTML += `
-	        <tr>
-	          <td></td>
-	          <td></td>
-	          <td></td>
-	          <td></td>
-	          <td></td>
-	          <td></td>
-	          <td></td>
-	        </tr>`;
-	    }
-	  }
-	  document.getElementById("id_dailyRoutineTable_body").innerHTML = tableBodyHTML;
-	  let activeHourQuery;
-	  let scrollToNow;
-	  scrollToNow = function () {
-	    activeHourQuery = document.getElementsByClassName("hour active");
-	    if (!activeHourQuery.length) {
-	      setTimeout(scrollToNow, 100);
-	      return 0;
-	    }
-	    document.getElementsByClassName("hour active")[0].scrollIntoView();
-	    return 1;
-	  };
-	  
-  </script>
+  <script src="js/daily_routine.js"></script>
 </html>
