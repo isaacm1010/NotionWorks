@@ -1,0 +1,22 @@
+:root {
+  /* Rich black */
+  --primary-1: #0D1B2A;
+  /* Oxford Blue 1 */
+  --primary-2: #142133;
+  /* Oxford Blue 2 */
+  --primary-3: #1B263B;
+  /* Indigo dye */
+  --primary-4: #2E4059;
+  /* YlnMn Blue */
+  --primary-5: #415A77;
+  /* Payne's gray */
+  --primary-6: #4F6784;
+  /* Slate gray */
+  --primary-7: #5C7490;
+  /* Silver Lake Blue */
+  --primary-8: #778DA9;
+  /* French gray */
+  --primary-9: #ACB7C3;
+  /* Platinum */
+  --primary-10: #E0E1DD;
+}
